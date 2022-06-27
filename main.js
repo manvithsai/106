@@ -1,6 +1,6 @@
 function startclassification(){
     navigator.mediaDevices.getUserMedia({audio:true});
-    classifier.ml5.soundClassify('https://storage.googleapis.com/tm-model/u02fOYRBx/model.json',modelReady)
+    classifier=ml5.soundClassify('https://storage.googleapis.com/tm-model/u02fOYRBx/model.json',modelReady)
 }
 function modelReady(){
     classifier.classify(gotResults);
