@@ -22,17 +22,29 @@ function gotResults(error,results){
     img-2=document.getElementById("cat");
     img-3=document.getElementById("lion");
     img-4=document.getElementById("bird");
-    if(results[0].label=="Barking"){
-        img.src='dog.jpg';
-    }
-    else if(results[0].label=="Meow"){
-        img-2.src='cat.jpg';
+    if(results[0].label=="bark"){
+        img.src='dog.gif';
+        img-2.src='lion.jpg';
+        img-3.src='cat.jpg';
+        img-4.src='bird.jpg';
     }
     else if(results[0].label=="roar"){
-        img-3.src='lion.jpg';
+        img.src='dog.jpg';
+        img-2.src='lion.gif';
+        img-3.src='cat.jpg';
+        img-4.src='bird.jpg';
+    }
+    else if(results[0].label=="meow"){
+        img.src='dog.jpg';
+        img-2.src='lion.jpg';
+        img-3.src='cat.gif';
+        img-4.src='bird.jpg';
     }
     else{
-        img-4.src='bird.jpg';  
+        img.src='dog.jpg';
+        img-2.src='lion.jpg';
+        img-3.src='cat.jpg';
+        img-4.src='bird.gif';  
     }
     }
     }
